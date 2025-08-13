@@ -1,0 +1,172 @@
+/* <!-- Custom CSS --> */
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+img{
+  height: 80px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0px 0px #0f0c29;
+}
+img:hover{
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+}
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&w=1500")
+    no-repeat center/cover;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+/* 3D Cards */
+.music-card {
+  background: linear-gradient(145deg, #1e1e2f, #2b2b44);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  transition: transform 0.3s ease;
+}
+.music-card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+.music-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 0;
+}
+
+/* Navbar */
+.custom-navbar {
+  background: linear-gradient(
+    135deg,
+    #6a11cb,
+    #2575fc
+  ); /* Purple to Blue gradient */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+    inset 0 2px 6px rgba(255, 255, 255, 0.2); /* Outer & Inner shadow for 3D */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Stronger text shadow */
+  color: #fff !important;
+}
+
+.custom-navbar .nav-link {
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: #f0f0f0 !important;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px) scale(1.05); /* Slight scale for pop-out */
+  box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4); /* Blue glow */
+  color: #fff !important;
+}
+
+@media (max-width: 991px) {
+  .custom-navbar {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+}
+.album-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.album-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.album-img {
+  position: relative;
+  overflow: hidden;
+}
+.album-img img {
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.4s ease;
+}
+.album-card:hover img {
+  transform: scale(1.1);
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 2rem;
+  color: #1e3c72;
+}
+.album-card:hover .play-btn {
+  opacity: 1;
+}
+.genre-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.genre-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+footer a:hover {
+  color: #ffdd57 !important;
+  transition: color 0.3s ease;
+}
+/*  */
+#player {
+  border-top: 2px solid rgba(255,255,255,0.2);
+}
+#albumArt {
+  transition: transform 0.3s ease;
+}
+#audioPlayer {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
